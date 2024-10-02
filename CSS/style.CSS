@@ -1,11 +1,12 @@
 :root {
     /* Define variables CSS para los colores y tamaños de texto */
-    --color_text-primary: #309C13;       /* Color de texto primario */
+    --color_text-primary: #139c68;       /* Color de texto primario */
     --color_text-secundary: #101E2C;     /* Color de texto secundario */
     --color_text-tertiary: #155404;      /* Color de texto terciario */
-    --main_color-primary: #155404;       /* Color principal */
-    --main_color-secundary: #8ADA74;     /* Color secundario */
-    --background-color: #EFF0EF;         /* Color de fondo */
+    --main_color-primary: #55b9a0;       /* Color principal */
+    --main_color-secundary: #74dab0;     /* Color secundario */
+    --main_color_terceary: #47bec7;
+    --background-color: #aadad4;         /* Color de fondo */
     --lowText_font_size: 16px;           /* Tamaño de fuente para texto pequeño */
     --text_size_title: 40px;             /* Tamaño de fuente para títulos */
     --text_title_card: 24px;             /* Tamaño de fuente para títulos de tarjeta */
@@ -50,7 +51,7 @@ header{
 .menu{
     display: flex;
     align-items: center;
-    background-color: rgb(113, 231, 102); /* Fondo transparente por defecto */
+    background-color: var(--main_color-primary); /* Fondo transparente por defecto */
     transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
     position: sticky; /* Hace que el menú se quede fijo en la parte superior */
     top: 0; /* Posición en la parte superior de la pantalla */
@@ -84,7 +85,7 @@ header{
 }
 
 .btn_quote:hover{
-    color: white;
+    color: rgb(var(--main_color-secundary), var(--main_color_terceary), var(--main_color-secundary));
     background: var(--color_text-primary);
 }
 .menu .socialMedia{
@@ -142,7 +143,7 @@ header{
 
     font-weight: 500;
 
-    background-color: rgb(71, 185, 106);
+    background: linear-gradient(var(--main_color-secundary), var(--main_color_terceary), var(--main_color-secundary));
 
     border-radius: 8px;
 
@@ -153,11 +154,22 @@ header{
     transition: all 300ms;
 }
 
+
+.container_box-cardPrimary{
+    margin: auto;
+    display: flex;
+    padding: 0px 20px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
 .image__cover img {
     width: 550px;
 }
 .container__card-primary{
     padding-top: 100px;
+    max-height: 100%;
+    
 }
 .card__primary{
     max-width: 1200px;
@@ -168,6 +180,7 @@ header{
 .text__card-primary{
     max-width: 800px;
     margin: auto;
+    text-align: center;
 }
 .text__card-primary p{
     letter-spacing: 4px;
@@ -177,5 +190,5 @@ header{
 
 .text__card-primary h1{
     font-size: var(--text_size_title);
-    font-weight: 600;
+    font-weight: 600px;
 }
