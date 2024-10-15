@@ -6,6 +6,9 @@
     --main_color-primary: #55b9a0;       /* Color principal */
     --main_color-secundary: #74dab0;     /* Color secundario */
     --main_color_terceary: #47bec7;
+    --main_color_back: #6bddc1;
+    --main_color_shadow: #1e8eb1;
+    --main_color_border: #454849;
     --background-color: #aadad4;         /* Color de fondo */
     --lowText_font_size: 16px;           /* Tamaño de fuente para texto pequeño */
     --text_size_title: 40px;             /* Tamaño de fuente para títulos */
@@ -25,14 +28,19 @@
 
 header{
     width: 100%;
-    height: 100px;
+    height: 80px;
     position: fixed; /*Esta propiedad permite que el elemento header este fijo en nuestra página*/
     z-index: 100; /*Esta propiedad permite que el elemento header se sueprponga a otros elementos en nuestra página*/
 }
 .container_header{
-    max-width: 1200px;
+    background-color: var(--main_color-primary);
+    border-style: solid;
+    border-color: var(--main_color_border);
+    max-width: 1300px;
     height: 100%;
-    margin: auto; /*Centrar el elemento horizontalmente */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px; /*Centrar el elemento horizontalmente */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,7 +54,8 @@ header{
     z-index: 1;
 }
 .logo img{
-    width: 100px;
+    width: 80px;
+    height: 80px;
 }
 .menu{
     display: flex;
@@ -89,7 +98,7 @@ header{
     background: var(--color_text-primary);
 }
 .menu .socialMedia{
-    margin: 0px 20px;
+    margin-left: auto;
 }
 
 .menu .socialMedia a{
@@ -105,6 +114,9 @@ header{
 }
 
 .cover{
+
+    border-style: solid;
+    border-color: var(--main_color_border);
 
     max-width: 1200px;
 
@@ -125,11 +137,24 @@ header{
 .text__cover h1{
     font-size: 50px;
 
+    text-align: center;
+
+    margin-top: 40px;
+
     color: rgb(53, 51, 51);
 }
 .text__cover p{
     margin-top: 40px;
 }
+
+.image__cover{
+
+    height: 100px;
+    width: 100px;
+    
+
+}
+
 .btn_text{
     display: block;
 
@@ -143,7 +168,7 @@ header{
 
     font-weight: 500;
 
-    background: linear-gradient(var(--main_color-secundary), var(--main_color_terceary), var(--main_color-secundary));
+    background: linear-gradient(to right, var(--color_text-primary), var(--main_color_shadow), var(--color_text-primary));
 
     border-radius: 8px;
 
@@ -172,6 +197,8 @@ header{
     
 }
 .card__primary{
+    border-style: solid;
+    border-color: var(--main_color_border);
     max-width: 1200px;
     margin: auto;
     text-align: center;
